@@ -11,14 +11,14 @@
 .videos-page {
   min-height: 100vh;
   padding-top: 120px;
-  background: linear-gradient(180deg, #05122b, #c85b1f);
+  background: linear-gradient(180deg, #203960, #c85b1f); /* etwas helleres Blau */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .video-wrapper {
-  width: 66%; /* 2/3 der Seite */
+  width: 80%; /* Videos breiter */
   margin: 40px 0;
   position: relative;
   overflow: hidden;
@@ -33,7 +33,7 @@
 
 .video-wrapper iframe {
   width: 100%;
-  height: 380px;
+  height: 400px;
   border: none;
   border-radius: 12px;
 }
@@ -46,47 +46,12 @@ h1 {
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
-/* Social Media Icons */
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 60px 0;
-}
-.socials a {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.socials a:hover {
-  transform: scale(1.2);
-  background: rgba(255,255,255,0.6);
-}
-.socials img {
-  width: 30px;
-  height: 30px;
-}
-
 @media (max-width: 768px) {
   .video-wrapper {
-    width: 90%;
+    width: 95%;
   }
   .video-wrapper iframe {
     height: 250px;
-  }
-  .socials a {
-    width: 50px;
-    height: 50px;
-  }
-  .socials img {
-    width: 24px;
-    height: 24px;
   }
 }
 </style>
@@ -121,13 +86,6 @@ h1 {
 
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/-SAvo_w3YwY" allowfullscreen></iframe>
-</div>
-
-<!-- Social Media Icons -->
-<div class="socials">
-  <a href="https://www.instagram.com/orablu_band/" target="_blank"><img src="instagram.svg" alt="Instagram" /></a>
-  <a href="https://www.tiktok.com/@orablu_music" target="_blank"><img src="tiktok.svg" alt="TikTok" /></a>
-  <a href="https://www.youtube.com/@orablu" target="_blank"><img src="youtube.svg" alt="YouTube" /></a>
 </div>
 
 </div>
