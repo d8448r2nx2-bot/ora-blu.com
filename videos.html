@@ -1,0 +1,136 @@
+<!-- videos.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORA BLU - Videos</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+/* VIDEOS PAGE CUSTOM */
+.videos-page {
+  min-height: 100vh;
+  padding-top: 120px;
+  background: linear-gradient(180deg, #05122b, #c85b1f);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-wrapper {
+  width: 66%; /* 2/3 der Seite */
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  border-radius: 12px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 3em;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* Social Media Icons */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+}
+.socials a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.socials a:hover {
+  transform: scale(1.2);
+  background: rgba(255,255,255,0.6);
+}
+.socials img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    width: 90%;
+  }
+  .video-wrapper iframe {
+    height: 250px;
+  }
+  .socials a {
+    width: 50px;
+    height: 50px;
+  }
+  .socials img {
+    width: 24px;
+    height: 24px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<nav class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="bio.html">Artist Bio</a></li>
+<li><a href="videos.html">Videos</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="videos-page">
+<div class="container">
+<h1>Videos</h1>
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/kmVwEuNleAw" allowfullscreen></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/w2FVJZMGa1Q" allowfullscreen></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/D5quEH92CLg" allowfullscreen></iframe>
+</div>
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/-SAvo_w3YwY" allowfullscreen></iframe>
+</div>
+
+<!-- Social Media Icons -->
+<div class="socials">
+  <a href="https://www.instagram.com/orablu_band/" target="_blank"><img src="instagram.svg" alt="Instagram" /></a>
+  <a href="https://www.tiktok.com/@orablu_music" target="_blank"><img src="tiktok.svg" alt="TikTok" /></a>
+  <a href="https://www.youtube.com/@orablu" target="_blank"><img src="youtube.svg" alt="YouTube" /></a>
+</div>
+
+</div>
+</section>
+</body>
+</html>
