@@ -139,3 +139,17 @@ h1, h2 {
     height: 180px;
   }
 }
+/* FONT & COLOR UPDATE FOR NAVIGATION */
+.navbar ul li a {
+  font-family: 'Brown Sugar', sans-serif; 
+  color: #ff8c2a; /* dunkelorange */
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.navbar ul li a:hover {
+  color: #ffc085; /* helleres Orange beim Hover */
+  text-decoration: none;
+}
