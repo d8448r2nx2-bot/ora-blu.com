@@ -58,36 +58,47 @@ body {
 /* ---------------------------------------------------
    LANDING PAGE
 --------------------------------------------------- */
+/* ---------- LANDING (NEUES CROPPING) ---------- */
 .page-landing .landing {
   height: 100vh;
   width: 100%;
-  background: url('sonjaglasder_orablu_2025_film-58.JPG') 
-    no-repeat center center/cover;
-  position: relative;
 
+  background: url('sonjaglasder_orablu_2025_film-58.JPG') no-repeat center center;
+  background-size: cover;
+
+  /* WICHTIG: Bild nach unten verschieben, damit das Gesicht oben verschwindet */
+  background-position: center 30%;
+
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* verhindert Scrollen */
 }
 
-/* dark overlay */
+/* weiches Overlay */
 .page-landing .landing::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.45));
-  z-index:1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.18),
+    rgba(0,0,0,0.40)
+  );
+  z-index: 1;
 }
 
+/* Inhalt */
 .page-landing .landing-content {
-  position:relative;
-  z-index:2;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:28px;
+  position: relative;
+  z-index: 2;
 
-  /* pushes logo + icons downward */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  /* lässt das Logo tiefer erscheinen — angepasst aus deinem Code */
   padding-top: 220px;
 }
 
