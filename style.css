@@ -13,7 +13,6 @@ body {
   color: #fff;
 }
 
-
 /* ---------------------------------------------------
    NAVBAR
 --------------------------------------------------- */
@@ -41,7 +40,7 @@ body {
 }
 
 .nav-links a {
-  color: #ffdfc8;               /* warm orange-rose Schrift */
+  color: #ff8c42; /* Dunkelorange */
   font-size: 20px;
   text-decoration: none;
   letter-spacing: 1px;
@@ -54,33 +53,38 @@ body {
   transform: translateY(-2px);
 }
 
-
 /* ---------------------------------------------------
    LANDING PAGE
 --------------------------------------------------- */
-/* ---------- LANDING (NEUES CROPPING) ---------- */
 .page-landing .landing {
+  position: relative;
   height: 100vh;
   width: 100%;
-
-  background: url('sonjaglasder_orablu_2025_film-58.JPG') no-repeat center center;
-  background-size: cover;
-
-  /* WICHTIG: Bild nach unten verschieben, damit das Gesicht oben verschwindet */
-  background-position: center 40%;
-
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* verhindert Scrollen */
+  overflow: hidden;
 }
 
-/* weiches Overlay */
-.page-landing .landing::after {
-  content: "";
+/* Hintergrundvideo */
+.landing-video {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay für Kontrast */
+.page-landing .landing::after {
+  content:"";
+  position:absolute;
+  inset:0;
   background: linear-gradient(
     rgba(0,0,0,0.18),
     rgba(0,0,0,0.40)
@@ -88,28 +92,25 @@ body {
   z-index: 1;
 }
 
-/* Inhalt */
+/* Inhalt (Logo + Socials) */
 .page-landing .landing-content {
   position: relative;
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 28px;
-
-  /* lässt das Logo tiefer erscheinen — angepasst aus deinem Code */
-  padding-top: 220px;
+  padding-top: 220px; /* Logo tiefer positionieren */
 }
 
-/* LOGO */
+/* Logo */
 .landing-logo {
   width: 45%;
   max-width: 380px;
   opacity: 0.5;
 }
 
-/* SOCIAL ICONS */
+/* Social Icons */
 .landing-socials {
   display:flex;
   gap:22px;
@@ -130,7 +131,6 @@ body {
   opacity: 0.95;
 }
 
-
 /* ---------------------------------------------------
    BIO PAGE
 --------------------------------------------------- */
@@ -146,35 +146,21 @@ body {
   padding: 60px 20px 120px;
 }
 
-/* modern artistic panel */
 .bio-panel {
   max-width: 900px;
   width: 100%;
   padding: 50px 60px;
-
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(14px);
-
   border-radius: 26px;
   border: 1px solid rgba(255,255,255,0.15);
-
   box-shadow: 0 22px 50px rgba(0,0,0,0.35);
-
   animation: fadein .8s ease forwards;
 }
 
 @keyframes fadein {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-
-.bio-title {
-  font-size: 54px;
-  letter-spacing: 2px;
-  margin-bottom: 36px;
-  color: #ffe9d3;
-  font-style: italic;
-  text-align: center;
 }
 
 .bio-text-block {
@@ -184,17 +170,13 @@ body {
   opacity: 0.95;
   text-align: left;
   white-space: pre-line;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
-.bio-text-block p {
-  margin-bottom: 18px;
-}
-
-
-/* ---------------------------------------- */
-/* FILMSTRIP VIDEO PAGE */
-/* ---------------------------------------- */
-
+/* ---------------------------------------------------
+   VIDEOS PAGE - FILMSTRIP
+--------------------------------------------------- */
 .page-videos {
   background: #000;
   color: #fff;
@@ -202,7 +184,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Titel */
 .page-videos h1 {
   text-align: center;
   margin-top: 120px;
@@ -218,11 +199,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 40px;
-
-  /* Sanftes Scrollen */
   scroll-behavior: smooth;
-
-  /* Kein hässlicher Scrollbalken */
   scrollbar-width: none;
 }
 .filmstrip-wrapper::-webkit-scrollbar {
@@ -239,7 +216,7 @@ body {
 
 /* Einzelnes Video */
 .video-item {
-  flex: 0 0 800px;        /* = Breite eines Filmframes */
+  flex: 0 0 800px;
   text-align: center;
 }
 
@@ -254,7 +231,6 @@ body {
   box-shadow: 0 0 35px rgba(0,0,0,0.6);
 }
 
-/* Iframe: groß, HQ, Cinematic */
 .video-aspect iframe {
   position: absolute;
   top: 0;
@@ -262,12 +238,11 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-
   image-rendering: auto;
   filter: brightness(1.1) contrast(1.1);
 }
 
-/* Beschreibung */
+/* Beschreibung unter Video */
 .video-description {
   margin-top: 18px;
   font-size: 1.4rem;
@@ -276,7 +251,7 @@ body {
   color: #ccc;
 }
 
-/* Mobile Version */
+/* MOBILE VIDEOS */
 @media (max-width: 700px) {
   .filmstrip {
     gap: 40px;
@@ -284,15 +259,13 @@ body {
   }
 
   .video-item {
-    flex: 0 0 85vw;      /* Volle Displaybreite als Frame */
+    flex: 0 0 85vw;
   }
 
   .video-description {
     font-size: 1.2rem;
   }
 }
-
-
 
 /* ---------------------------------------------------
    CONTACT PAGE
