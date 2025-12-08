@@ -79,7 +79,7 @@ body {
   object-fit: cover;
 
    /* Hier Video nach unten verschieben */
-  object-position: center 70%; /* z.B. 70% von oben */
+  object-position: center 40%; /* z.B. 40% von oben */
    
   z-index: 0;
 }
