@@ -119,6 +119,9 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 28px;
+
+  /* >>> NEU: Abstand nach oben <<< */
+  margin-top: 18vh;
 }
 
 /* Logo – 50% transparent */
