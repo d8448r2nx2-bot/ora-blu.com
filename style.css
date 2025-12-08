@@ -67,7 +67,7 @@ body {
   background-size: cover;
 
   /* WICHTIG: Bild nach unten verschieben, damit das Gesicht oben verschwindet */
-  background-position: center 30%;
+  background-position: center 40%;
 
   position: relative;
   display: flex;
