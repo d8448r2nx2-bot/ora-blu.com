@@ -1,43 +1,35 @@
-/* -------------------------------------------------- */
-/* ORA BLU – GLOBAL STYLE */
-/* -------------------------------------------------- */
-
-@font-face {
-  font-family: 'TheSeasons';
-  src: url('TheSeasons-RegularItalic.otf') format('opentype');
-}
-
-html, body {
+/* ---------------------------------------------------
+   GLOBAL FONT + RESET
+--------------------------------------------------- */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'TheSeasons', serif;
-  color: #fff;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "The Seasons", serif;
   background: #000;
+  color: #fff;
 }
 
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-}
 
-/* -------------------------------------------------- */
-/* NAVIGATION – Modern ORA BLU Edition */
-/* -------------------------------------------------- */
-
+/* ---------------------------------------------------
+   NAVBAR
+--------------------------------------------------- */
 .navbar {
+  width: 100%;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 22px 0;
-
-  background: rgba(5, 12, 32, 0.35);
-  backdrop-filter: blur(10px);
+  left: 0;
+  z-index: 50;
+  padding: 18px 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
 }
 
 .nav-container {
-  max-width: 1100px;
-  margin: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -45,198 +37,186 @@ img {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 60px;
-  padding: 0;
-  margin: 0;
+  gap: 42px;
 }
 
-.nav-links li a {
-  font-family: 'TheSeasons', serif;
-  font-size: 22px;
-  letter-spacing: 1px;
-  color: #ffd2a0;
+.nav-links a {
+  color: #ffdfc8;               /* warm orange-rose Schrift */
+  font-size: 20px;
   text-decoration: none;
-  padding-bottom: 6px;
-  position: relative;
-  transition: color 0.3s ease;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  transition: opacity .25s ease, transform .25s ease;
 }
 
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(to right, #f7a15f, #ff7b36);
-  transition: width 0.3s ease;
+.nav-links a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
-.nav-links li a:hover {
-  color: #ffffff;
-}
 
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
-@media (max-width: 700px) {
-  .nav-links {
-    gap: 30px;
-  }
-  .nav-links li a {
-    font-size: 18px;
-  }
-}
-
-/* -------------------------------------------------- */
-/* LANDING PAGE */
-/* -------------------------------------------------- */
-
-.landing {
+/* ---------------------------------------------------
+   LANDING PAGE
+--------------------------------------------------- */
+.page-landing .landing {
   height: 100vh;
   width: 100%;
-  background: url('sonjaglasder_orablu_2025_film-58.JPG') no-repeat center center/cover;
+  background: url('sonjaglasder_orablu_2025_film-58.JPG') 
+    no-repeat center center/cover;
+  position: relative;
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
-  text-align: center;
-}
-
-.landing::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.35));
-  z-index: 1;
-}
-
-.landing-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 28px;
-
-  /* >>> NEU: Abstand nach oben <<< */
-  margin-top: 20vh;
 }
 
-/* Logo – 50% transparent */
+/* dark overlay */
+.page-landing .landing::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.45));
+  z-index:1;
+}
+
+.page-landing .landing-content {
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+
+  /* pushes logo + icons downward */
+  padding-top: 220px;
+}
+
+/* LOGO */
 .landing-logo {
   width: 45%;
   max-width: 380px;
   opacity: 0.5;
-  display: block;
 }
 
-/* Social Icons */
+/* SOCIAL ICONS */
 .landing-socials {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-  justify-content: center;
+  display:flex;
+  gap:22px;
+  justify-content:center;
+  align-items:center;
 }
 
 .social-img {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
+  width:56px;
+  height:56px;
+  object-fit:contain;
   filter: drop-shadow(0 6px 14px rgba(0,0,0,0.45));
-  transition: transform 0.18s ease, opacity 0.18s ease, filter 0.18s ease;
+  transition: transform .2s ease, opacity .2s ease;
 }
 
 .social-img:hover {
-  transform: translateY(-6px) scale(1.06);
+  transform: translateY(-4px) scale(1.07);
   opacity: 0.95;
-  filter: drop-shadow(0 12px 22px rgba(0,0,0,0.55));
 }
 
-/* -------------------------------------------------- */
-/* BIO / VIDEOS / CONTACT – SECTION BASICS */
-/* -------------------------------------------------- */
 
-section {
+/* ---------------------------------------------------
+   BIO PAGE
+--------------------------------------------------- */
+.page-bio {
+  background: linear-gradient(to bottom, #18294b, #c45f27);
   padding-top: 140px;
-  padding-bottom: 80px;
-  min-height: 100vh;
 }
 
-h1 {
-  text-align: center;
-  font-size: 46px;
-  margin-bottom: 40px;
-  color: #ffe7cf;
-}
-
-/* -------------------------------------------------- */
-/* BIO PAGE */
-/* -------------------------------------------------- */
-
-.bio {
-  background: linear-gradient(to bottom, #243463, #c46a31);
-  color: #fff;
-  font-family: 'TheSeasons', serif;
-  line-height: 1.7;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: 20px;
-}
-
-.bio p {
-  max-width: 900px;
-  margin: auto;
-  color: #fff;
-}
-
-/* -------------------------------------------------- */
-/* VIDEOS PAGE */
-/* -------------------------------------------------- */
-
-.videos {
-  background: linear-gradient(to bottom, #1d2f58, #c25b2a);
-  text-align: center;
-}
-
-.video-block {
-  max-width: 800px;
-  margin: 0 auto 60px auto;
-}
-
-.video-block iframe {
+.bio-page {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  height: 420px;
-  border-radius: 10px;
-  border: none;
+  padding: 60px 20px 120px;
 }
 
-.video-title {
-  margin-top: 16px;
-  font-size: 22px;
-  color: #ffe7cf;
+/* modern artistic panel */
+.bio-panel {
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 60px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow: 0 22px 50px rgba(0,0,0,0.35);
+
+  animation: fadein .8s ease forwards;
 }
 
-/* -------------------------------------------------- */
-/* CONTACT PAGE */
-/* -------------------------------------------------- */
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
-.contact {
-  background: linear-gradient(to bottom, #1b2a55, #c25b2a);
+.bio-title {
+  font-size: 54px;
+  letter-spacing: 2px;
+  margin-bottom: 36px;
+  color: #ffe9d3;
+  font-style: italic;
   text-align: center;
-  font-family: 'TheSeasons', serif;
+}
+
+.bio-text-block {
+  font-size: 20px;
+  line-height: 1.68;
+  color: #fff;
+  opacity: 0.95;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.bio-text-block p {
+  margin-bottom: 18px;
+}
+
+
+/* ---------------------------------------------------
+   VIDEO PAGE (Fallback – falls du sie später einfügst)
+--------------------------------------------------- */
+.page-videos {
+  background: linear-gradient(to bottom, #1a294b, #c45d28);
+  padding-top: 150px;
+  text-align: center;
+}
+
+.video-item {
+  margin-bottom: 80px;
+}
+
+.video-description {
+  margin-top: 12px;
+  font-size: 20px;
+  opacity: 0.85;
+}
+
+
+/* ---------------------------------------------------
+   CONTACT PAGE
+--------------------------------------------------- */
+.page-contact {
+  background: linear-gradient(to bottom, #162544, #c45f27);
+  padding-top: 150px;
+  text-align: center;
   color: #fff;
 }
 
 .contact-mail a {
-  color: #ffddb7;
+  color: #ffe4cd;
   font-size: 26px;
   text-decoration: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity .25s ease;
 }
 
 .contact-mail a:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
+  opacity: .8;
 }
