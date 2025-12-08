@@ -1,55 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ORA BLU - Videos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ORA BLU — Videos</title>
 
-  <link href="https://fonts.cdnfonts.com/css/brown-sugar" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <!-- The Seasons font (CDN) -->
+  <link href="https://db.onlinewebfonts.com/c/9366bd460113d8bf675fd2bdfe1ce764?family=The+Seasons" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body class="page-videos">
 
 <header>
   <nav class="navbar">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="bio.html">Bio</a></li>
-      <li><a href="videos.html" class="active">Videos</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="bio.html" class="nav-link">Bio</a></li>
+      <li><a href="videos.html" class="nav-link active">Videos</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<section class="video-page">
-  <div class="container">
+<main>
+  <section class="video-page">
+    <div class="container">
+      <h1>Videos</h1>
 
-    <h1>Videos</h1>
+      <article class="video-item">
+        <div class="video-aspect">
+          <iframe src="https://www.youtube.com/embed/kmVwEuNleAw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">On Repeat — Official Music Video</p>
+      </article>
 
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/embed/kmVwEuNleAw" allowfullscreen></iframe>
-      <p class="video-description">Carry Me</p>
+      <article class="video-item">
+        <div class="video-aspect">
+          <iframe src="https://www.youtube.com/embed/w2FVJZMGa1Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Live Session — ORA BLU</p>
+      </article>
+
+      <article class="video-item">
+        <div class="video-aspect">
+          <iframe src="https://www.youtube.com/embed/D5quEH92CLg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Behind The Scenes — Recording</p>
+      </article>
+
+      <article class="video-item">
+        <div class="video-aspect">
+          <iframe src="https://www.youtube.com/embed/-SAvo_w3YwY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p class="video-description">Live at MIT DIR Festival</p>
+      </article>
+
     </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/embed/w2FVJZMGa1Q" allowfullscreen></iframe>
-      <p class="video-description">Supernatural Thing</p>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/embed/D5quEH92CLg" allowfullscreen></iframe>
-      <p class="video-description">Bruce Lee</p>
-    </div>
-
-    <div class="video-item">
-      <iframe src="https://www.youtube.com/embed/-SAvo_w3YwY" allowfullscreen></iframe>
-      <p class="video-description">Live at ZIK</p>
-    </div>
-
-  </div>
-</section>
+  </section>
+</main>
 
 </body>
 </html>
