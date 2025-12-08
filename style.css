@@ -139,8 +139,12 @@ body {
    BIO PAGE
 --------------------------------------------------- */
 .page-bio {
-  background: linear-gradient(to bottom, #18294b, #c45f27);
+  background: url('sonjaglasder_orablu_2025_film-58.JPG') no-repeat center center;
+  background-size: cover;
   padding-top: 140px;
+  min-height: 100vh;
+  color: #fff;
+  font-family: "The Seasons", serif;
 }
 
 .bio-page {
@@ -150,21 +154,30 @@ body {
   padding: 60px 20px 120px;
 }
 
+/* modern artistic panel */
 .bio-panel {
   max-width: 900px;
   width: 100%;
   padding: 50px 60px;
-  background: rgba(255, 255, 255, 0.08);
+
+  background: rgba(0, 0, 0, 0.45); /* dunkles Overlay für Lesbarkeit */
   backdrop-filter: blur(14px);
+
   border-radius: 26px;
   border: 1px solid rgba(255,255,255,0.15);
+
   box-shadow: 0 22px 50px rgba(0,0,0,0.35);
+
   animation: fadein .8s ease forwards;
 }
 
-@keyframes fadein {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
+.bio-title {
+  font-size: 54px;
+  letter-spacing: 2px;
+  margin-bottom: 36px;
+  color: #ffe9d3;
+  font-style: italic;
+  text-align: center;
 }
 
 .bio-text-block {
@@ -174,8 +187,10 @@ body {
   opacity: 0.95;
   text-align: left;
   white-space: pre-line;
-  font-style: italic;
-  letter-spacing: 0.5px;
+}
+
+.bio-text-block p {
+  margin-bottom: 18px;
 }
 
 /* ---------------------------------------------------
@@ -275,10 +290,13 @@ body {
    CONTACT PAGE
 --------------------------------------------------- */
 .page-contact {
-  background: linear-gradient(to bottom, #162544, #c45f27);
+  background: url('sonjaglasder_orablu_2025_film-58.JPG') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
   padding-top: 150px;
   text-align: center;
   color: #fff;
+  font-family: "The Seasons", serif;
 }
 
 .contact-mail a {
