@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ORA BLU</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 
-<body>
+  <link href="https://fonts.cdnfonts.com/css/brown-sugar" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-landing">
+
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="bio.html">Bio</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="bio.html" class="nav-link">Bio</a></li>
+        <li><a href="videos.html" class="nav-link">Videos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- FULLSCREEN LANDING PAGE -->
-  <section id="landing" class="landing">
-    <div class="landing-content">
+  <main>
+    <section class="landing">
+      <div class="landing-content">
+        <!-- Logo (50% opacity) -->
+        <img src="logo.png" alt="Ora-Blu Logo" class="landing-logo">
 
-      <!-- LOGO -->
-      <img 
-        id="landing-logo" 
-        src="OraBlu.LOGO INVERT Kopie.png" 
-        alt="ORA BLU Logo" 
-        class="landing-logo"
-      />
-
-      <!-- SOCIAL ICONS -->
-      <div class="social-icons">
-        <a href="https://www.instagram.com/orablu.band" target="_blank">
-          <img src="instagram.png" alt="Instagram" class="social-icon" />
-        </a>
-
-        <a href="https://www.tiktok.com/@orablu.band" target="_blank">
-          <img src="tiktok.png" alt="TikTok" class="social-icon" />
-        </a>
-
-        <a href="https://www.youtube.com/@orablu" target="_blank">
-          <img src="youtube.png" alt="YouTube" class="social-icon" />
-        </a>
+        <!-- Social icons under logo -->
+        <div class="landing-socials">
+          <a href="https://www.instagram.com/orablu_band/" target="_blank" rel="noopener">
+            <img src="instagram.png" alt="Instagram" class="social-img">
+          </a>
+          <a href="https://www.tiktok.com/@orablu_music" target="_blank" rel="noopener">
+            <img src="tiktok.png" alt="TikTok" class="social-img">
+          </a>
+          <a href="https://www.youtube.com/@orablu" target="_blank" rel="noopener">
+            <img src="youtube.png" alt="YouTube" class="social-img">
+          </a>
+        </div>
       </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
 </body>
 </html>
