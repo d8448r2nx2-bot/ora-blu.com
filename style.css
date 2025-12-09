@@ -115,7 +115,9 @@ body {
 }
 
 /* Social Icons */
-.landing-socials {
+.landing-socials .social-img {
+  filter: brightness(0) invert(1); /* macht die Icons weiß */
+}
   display:flex;
   gap:22px;
   justify-content:center;
