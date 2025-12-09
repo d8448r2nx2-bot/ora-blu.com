@@ -306,3 +306,80 @@ body {
 .contact-mail a:hover {
   opacity: .8;
 }
+
+/* ---------------------------------------------------
+   MOBILE OPTIMIERUNGEN
+   (für Bildschirme unter 700px Breite)
+--------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+  /* NAVBAR */
+  .nav-links {
+    gap: 22px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  /* LANDING PAGE */
+  .page-landing .landing-content {
+    padding-top: 140px; /* Logo weiter oben */
+    gap: 18px;
+  }
+
+  .landing-logo {
+    width: 70%;
+    max-width: 260px;
+    opacity: 0.7;
+  }
+
+  .social-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Hintergrundvideo (Mobil zentriert + nicht abgeschnitten) */
+  .landing-video {
+    object-fit: contain;
+    width: 140%;
+    height: auto;
+  }
+
+  /* BIO PAGE */
+  .bio-panel {
+    padding: 30px 28px;
+    border-radius: 20px;
+  }
+
+  .bio-title {
+    font-size: 36px;
+  }
+
+  .bio-text-block {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  /* VIDEOS PAGE */
+  .page-videos h1 {
+    margin-top: 100px;
+    font-size: 2.2rem;
+  }
+
+  .filmstrip {
+    gap: 28px;
+    padding: 20px 20px;
+  }
+
+  .video-item {
+    flex: 0 0 92vw;
+  }
+
+  /* CONTACT */
+  .contact-mail a {
+    font-size: 22px;
+  }
+}
