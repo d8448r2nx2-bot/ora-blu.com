@@ -95,13 +95,16 @@ body {
 
 /* Inhalt (Logo + Socials) */
 .page-landing .landing-content {
-  position: relative;
+  position: absolute; /* von relative auf absolute ändern */
+  top: 50%;           /* vertikal zentrieren */
+  left: 50%;          /* horizontal zentrieren */
+  transform: translate(-50%, -50%); /* genau zentrieren */
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 28px;
-  padding-top: 220px; /* Logo tiefer positionieren */
+  padding-top: 0; /* alten Abstand entfernen */
 }
 
 /* Logo */
