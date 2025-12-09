@@ -135,14 +135,13 @@ body {
   opacity: 0.95;
 }
 
-/* ---------------------------------------------------
-   BIO PAGE
---------------------------------------------------- */
+/* BIO PAGE – kompakter */
 .page-bio {
   background: url('sonjaglasder_orablu_2025_film-76.JPG') no-repeat center center;
   background-size: cover;
-  padding-top: 140px;
-  min-height: 100vh;
+  padding-top: 60px;   /* früher 140px */
+  padding-bottom: 60px; /* reduziert Gesamt-Scroll */
+  min-height: auto;     /* nicht 100vh, damit es sich anpasst */
   color: #fff;
   font-family: "The Seasons", serif;
 }
@@ -151,47 +150,26 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 60px 20px 120px;
+  padding: 40px 20px 60px; /* kompakter als vorher */
 }
 
-/* modern artistic panel */
+/* Panel */
 .bio-panel {
   max-width: 900px;
   width: 100%;
-  padding: 50px 60px;
-
-  background: rgba(0, 0, 0, 0.45); /* dunkles Overlay für Lesbarkeit */
+  padding: 40px 40px;  /* kleineres Padding */
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
-
-  border-radius: 26px;
+  border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.15);
-
-  box-shadow: 0 22px 50px rgba(0,0,0,0.35);
-
-  animation: fadein .8s ease forwards;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
 }
 
-.bio-title {
-  font-size: 54px;
-  letter-spacing: 2px;
-  margin-bottom: 36px;
-  color: #ffe9d3;
-  font-style: italic;
-  text-align: center;
-}
-
-.bio-text-block {
-  font-size: 20px;
-  line-height: 1.68;
-  color: #fff;
-  opacity: 0.95;
-  text-align: left;
-  white-space: pre-line;
-}
-
+/* Absätze enger zusammen */
 .bio-text-block p {
-  margin-bottom: 12px;
+  margin-bottom: 12px; /* kleiner Abstand zwischen Absätzen */
 }
+
 
 /* ---------------------------------------------------
    VIDEOS PAGE - FILMSTRIP
