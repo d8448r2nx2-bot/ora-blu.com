@@ -135,13 +135,13 @@ body {
   opacity: 0.95;
 }
 
-/* BIO PAGE – kompakter */
+/* BIO PAGE – kompakt & voller Hintergrund */
 .page-bio {
-  background: url('sonjaglasder_orablu_2025_film-76.JPG') no-repeat center center;
-  background-size: cover;
-  padding-top: 60px;   /* früher 140px */
-  padding-bottom: 60px; /* reduziert Gesamt-Scroll */
-  min-height: auto;     /* nicht 100vh, damit es sich anpasst */
+  background: url('sonjaglasder_orablu_2025_film-76.JPG') no-repeat center top;
+  background-size: cover;    /* Hintergrundbild füllt die gesamte Fläche */
+  min-height: 100vh;         /* gesamte Höhe des Bildschirms */
+  padding-top: 60px;         /* kompakter als vorher */
+  padding-bottom: 60px;
   color: #fff;
   font-family: "The Seasons", serif;
 }
@@ -150,14 +150,14 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 40px 20px 60px; /* kompakter als vorher */
+  padding: 0 20px 0; /* reduziert unnötige Höhe */
 }
 
 /* Panel */
 .bio-panel {
   max-width: 900px;
   width: 100%;
-  padding: 40px 40px;  /* kleineres Padding */
+  padding: 40px 40px;  
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
   border-radius: 20px;
@@ -167,7 +167,7 @@ body {
 
 /* Absätze enger zusammen */
 .bio-text-block p {
-  margin-bottom: 12px; /* kleiner Abstand zwischen Absätzen */
+  margin-bottom: 12px; 
 }
 
 
