@@ -119,18 +119,19 @@ body {
   align-items: center;
 }
 
-/* Social icons */
+/* Social icons – now 50% opacity + white */
 .landing-socials .social-img {
   width: 56px;
   height: 56px;
   object-fit: contain;
+  opacity: 0.5;
   filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
   transition: transform .2s ease, opacity .2s ease;
 }
 
 .landing-socials .social-img:hover {
   transform: translateY(-4px) scale(1.07);
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 /* ---------------------------------------------------
