@@ -111,7 +111,7 @@ body {
   opacity: 0.5;
 }
 
-/* Social Icons Wrapper */
+/* Social Icons */
 .landing-socials {
   display: flex;
   gap: 22px;
@@ -119,23 +119,18 @@ body {
   align-items: center;
 }
 
-/* Social icons – weiß + 50% transparent */
+/* ✔ Icons bleiben immer weiß — keine Filter mehr */
 .landing-socials .social-img {
   width: 56px;
   height: 56px;
   object-fit: contain;
-  opacity: 0.5;
-
-  filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
-
+  opacity: 0.55;
   transition: transform .2s ease, opacity .2s ease;
 }
 
 .landing-socials .social-img:hover {
   transform: translateY(-4px) scale(1.07);
   opacity: 0.9;
-
-  filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
 }
 
 /* ---------------------------------------------------
@@ -263,10 +258,9 @@ body {
 --------------------------------------------------- */
 @media (max-width: 700px) {
 
-  /* 🔥 Mobile Video Optimiert: weniger Zoom, höherer Bildausschnitt */
+  /* Mobile Video–Fix */
   .landing-video {
     transform: translateX(-50%) translateY(-8%) scale(1.0);
-    object-position: top center;
   }
 
   .landing-logo {
