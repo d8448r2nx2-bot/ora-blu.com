@@ -1,288 +1,63 @@
-/* ---------------------------------------------------
-   GLOBAL FONT + RESET
---------------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ORA BLU</title>
 
-body {
-  font-family: "The Seasons", serif;
-  background: #000;
-  color: #fff;
-}
+  <link href="https://db.onlinewebfonts.com/c/9366bd460113d8bf675fd2bdfe1ce764?family=The+Seasons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-/* ---------------------------------------------------
-   NAVBAR
---------------------------------------------------- */
-.navbar {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 50;
-  padding: 18px 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(8px);
-}
+<body class="page-landing">
 
-.nav-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bio.html">Bio</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 42px;
-}
+<main>
+  <section class="landing">
 
-.nav-links a {
-  color: #ff8c42;
-  font-size: 20px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  opacity: 0.9;
-  transition: opacity .25s ease, transform .25s ease;
-}
+    <video autoplay muted loop playsinline class="landing-video">
+      <source src="ORA_BLU_-_CARRY_ME_MASTER_Kopie.mp4" type="video/mp4">
+    </video>
 
-.nav-links a:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-}
+    <div class="landing-content">
 
-/* ---------------------------------------------------
-   LANDING PAGE
---------------------------------------------------- */
-.page-landing .landing {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+      <img src="OraBlu.LOGO INVERT Kopie.png" alt="ORA BLU Logo" class="landing-logo">
 
-/* Hintergrundvideo */
-.landing-video {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translateX(-50%) scale(1.1);
-  object-fit: cover;
-  object-position: top center;
-  z-index: 0;
-}
+      <div class="landing-socials">
 
-/* Overlay */
-.page-landing .landing::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.18),
-    rgba(0,0,0,0.40)
-  );
-  z-index: 1;
-}
+        <a href="https://www.instagram.com/orablu_band/" target="_blank" rel="noopener">
+          <img src="instagram.png" alt="Instagram" class="social-img">
+        </a>
 
-/* Landing Content */
-.page-landing .landing-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
-}
+        <a href="https://www.tiktok.com/@orablu_music" target="_blank" rel="noopener">
+          <img src="tiktok.png" alt="TikTok" class="social-img">
+        </a>
 
-/* Logo */
-.landing-logo {
-  width: 45%;
-  max-width: 380px;
-  opacity: 0.5;
-}
+        <a href="https://open.spotify.com/artist/6W85vCct2BUhK4mX1H1Flh" target="_blank" rel="noopener">
+          <img src="spotify.png" alt="Spotify" class="social-img">
+        </a>
 
-/* Social Icons */
-.landing-socials {
-  display: flex;
-  gap: 22px;
-  justify-content: center;
-  align-items: center;
-}
+        <a href="https://www.youtube.com/@orablu" target="_blank" rel="noopener">
+          <img src="youtube.png" alt="YouTube" class="social-img">
+        </a>
 
-/* ✔ Icons bleiben immer weiß — keine Filter mehr */
-.landing-socials .social-img {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-  opacity: 0.55;
-  transition: transform .2s ease, opacity .2s ease;
-}
+      </div>
+    </div>
 
-.landing-socials .social-img:hover {
-  transform: translateY(-4px) scale(1.07);
-  opacity: 0.9;
-}
+  </section>
+</main>
 
-/* ---------------------------------------------------
-   BIO PAGE
---------------------------------------------------- */
-.page-bio {
-  background: url('sonjaglasder_orablu_2025_film-76.JPG') no-repeat center top;
-  background-size: cover;
-  min-height: 100vh;
-  padding: 60px 0;
-}
-
-.bio-page {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 0 20px;
-}
-
-.bio-panel {
-  max-width: 900px;
-  width: 100%;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(14px);
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
-}
-
-.bio-text-block p {
-  margin-bottom: 12px;
-}
-
-/* ---------------------------------------------------
-   VIDEOS PAGE
---------------------------------------------------- */
-.page-videos {
-  background: #000;
-  color: #fff;
-  font-family: "The Seasons", serif;
-  overflow-x: hidden;
-}
-
-.page-videos h1 {
-  text-align: center;
-  margin-top: 120px;
-  margin-bottom: 60px;
-  font-size: 3rem;
-  font-style: italic;
-  letter-spacing: 2px;
-}
-
-/* Filmstrip Wrapper */
-.filmstrip-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  padding-bottom: 40px;
-  scrollbar-width: none;
-}
-.filmstrip-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-/* Filmstrip */
-.filmstrip {
-  display: flex;
-  gap: 60px;
-  padding: 40px 60px;
-  align-items: center;
-}
-
-.video-item {
-  flex: 0 0 800px;
-  text-align: center;
-}
-
-.video-aspect {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #111;
-  box-shadow: 0 0 35px rgba(0,0,0,0.6);
-}
-
-.video-aspect iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Beschreibung */
-.video-description {
-  margin-top: 18px;
-  font-size: 1.4rem;
-  font-style: italic;
-  color: #ccc;
-}
-
-/* ---------------------------------------------------
-   CONTACT PAGE
---------------------------------------------------- */
-.page-contact {
-  background: url('sonjaglasder_orablu_2025_film-58.JPG') no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  padding-top: 150px;
-  text-align: center;
-}
-
-.contact-mail a {
-  color: #ffe4cd;
-  font-size: 26px;
-  text-decoration: none;
-}
-
-/* ---------------------------------------------------
-   MOBILE
---------------------------------------------------- */
-@media (max-width: 700px) {
-
-  /* Mobile Video–Fix */
-  .landing-video {
-    transform: translateX(-50%) translateY(-8%) scale(1.0);
-  }
-
-  .landing-logo {
-    width: 70%;
-    max-width: 260px;
-  }
-
-  .landing-socials .social-img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .filmstrip {
-    gap: 28px;
-    padding: 20px;
-  }
-
-  .video-item {
-    flex: 0 0 92vw;
-  }
-
-  .contact-mail a {
-    font-size: 22px;
-  }
-}
+</body>
+</html>
