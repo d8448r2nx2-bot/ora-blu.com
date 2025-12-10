@@ -119,20 +119,26 @@ body {
   align-items: center;
 }
 
-/* Social icons – weiß + 50% transparent, Hover bleibt weiß */
+/* Social icons – weiß + 50% transparent */
 .landing-socials .social-img {
   width: 56px;
   height: 56px;
   object-fit: contain;
   opacity: 0.5;
+
+  /* fixierter Filter → NICHT animieren */
   filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
-  transition: transform .2s ease, opacity .2s ease, filter .2s ease;
+
+  /* remove filter transition! */
+  transition: transform .2s ease, opacity .2s ease;
 }
 
 .landing-socials .social-img:hover {
   transform: translateY(-4px) scale(1.07);
-  opacity: 0.9; /* leicht heller beim Hover */
-  filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45)); /* Filter bleibt weiß */
+  opacity: 0.9;
+
+  /* Filter NICHT anfassen → verhindert Schwarz-Blitz */
+  filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
 }
 
 /* ---------------------------------------------------
