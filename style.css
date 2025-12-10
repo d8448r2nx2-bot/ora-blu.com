@@ -126,10 +126,8 @@ body {
   object-fit: contain;
   opacity: 0.5;
 
-  /* fixierter Filter → NICHT animieren */
   filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
 
-  /* remove filter transition! */
   transition: transform .2s ease, opacity .2s ease;
 }
 
@@ -137,7 +135,6 @@ body {
   transform: translateY(-4px) scale(1.07);
   opacity: 0.9;
 
-  /* Filter NICHT anfassen → verhindert Schwarz-Blitz */
   filter: brightness(0) invert(1) drop-shadow(0 6px 14px rgba(0,0,0,0.45));
 }
 
@@ -265,6 +262,12 @@ body {
    MOBILE
 --------------------------------------------------- */
 @media (max-width: 700px) {
+
+  /* 🔥 Mobile Video Optimiert: weniger Zoom, höherer Bildausschnitt */
+  .landing-video {
+    transform: translateX(-50%) translateY(-8%) scale(1.0);
+    object-position: top center;
+  }
 
   .landing-logo {
     width: 70%;
